@@ -1,2 +1,7 @@
 ﻿# Data-Structures-and-Algorithms
-#Linked list
+LinkedList: 
+CircularLinkedList:
+Queue
+Reucrsion
+Stack
+Trees

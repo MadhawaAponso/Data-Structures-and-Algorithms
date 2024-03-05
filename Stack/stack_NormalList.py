@@ -21,6 +21,8 @@ class Stack():
         else:
             value = self.stack.pop(-1)
             return value
+    def delete(self):
+        self.stack = None
 
 new_stack = Stack()
 

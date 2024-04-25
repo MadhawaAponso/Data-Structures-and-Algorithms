@@ -1,39 +1,49 @@
 class Queue:
     def __init__(self):
-        self.itmes = []
-    
+        self.items = []
+        
     def __str__(self):
-        s_values = [str(x) for x in self.itmes]
-        return " ".join(s_values)
+        values = [str(x) for x in self.items]
+        return " ".join(values)
     
-    def IsEpmty(self):
-        if not self.itmes:
+    def isEmpty(self):
+        if self.items == []:
             return True
         else:return False
     
-    def Enqueue(self,data):
-        self.itmes.append(data)
-        return " The value is added"
+    def enqueue(self,value):
+        self.items.append(value)
+        return "The value is added"
+    
     
     def Dequeue(self):
-        if self.isEmpty():
-            return " The Queue is empty"
-        else:
-            return self.itmes.pop(0)  #O(N) complexity
+        if(self.isEmpty()):
+            return "The Queue is empty"
+        else:return self.items.pop(0)
         
     def Peek(self):
-        if self.isEmpty():
-            return " The Queue is empty"
-        else:return self.itmes[0]
+        if(self.isEmpty()):
+            return "The queue is empty"
+        else:
+            return self.items[0]
         
     def Delete(self):
-        if self.isEmpty():
-            return " The Queue is empty"
-        else:self.itmes = None
+        self.items = None
+    
+    
+my_queue = Queue()
 
-l = Queue()
-l.Enqueue(1)
-l.Enqueue(2)
-l.Enqueue(3)
-l.Enqueue(4)
-print(l)
+print("Before adding values:", str(my_queue.isEmpty()))
+my_queue.enqueue(1)
+my_queue.enqueue(2)
+my_queue.enqueue(3)
+my_queue.enqueue(4)
+my_queue.Dequeue()
+
+print("After adding values:", str(my_queue.isEmpty()))
+
+print(my_queue.Peek())
+
+
+print(my_queue)
+        

@@ -1,9 +1,3 @@
-#creation of linkedlist
-#insertion of node
-#Deletion
-#search
-#traverse all nodes
-#delete tree
 class TreeNode:
     def __init__(self,data):
         self.data = data

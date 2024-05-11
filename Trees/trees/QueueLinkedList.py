@@ -1,4 +1,4 @@
-# firts we need a node 
+
 class Node:
     def __init__(self,value):
         self.value = value
@@ -6,7 +6,6 @@ class Node:
     def __str__(self):
         return str(self.value)
         
-#then we need to create a lniked list as a queue
 
 class LinkedList:
     def __init__(self):
@@ -67,14 +66,7 @@ class Queue:
             return self.linkedlist.head
     
     
-my_queue = Queue()
-my_queue.Enqueue(1)
-my_queue.Enqueue(2)
-my_queue.Enqueue(4)
-# print(my_queue)
-# print("the peek value",my_queue.Peek())
-print(my_queue.Dequeue())
-print(my_queue.isEmpty())
+
         
             
         

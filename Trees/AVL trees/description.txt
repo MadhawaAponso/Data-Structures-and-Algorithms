@@ -1,0 +1,10 @@
+AVL trees are balanced binary trees
+
+components of operations in avl trees
+
+1. creation of avl trees
+2. search for a node in avl trees
+3. traverse all nodes in avl trees
+4. insert node in avl trees
+5. delete node in avl tree
+6. delete an entire avl tree

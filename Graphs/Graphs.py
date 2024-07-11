@@ -49,6 +49,7 @@ class Graphs:
         return tested
     
     def DepthFirstSearch(self,vertex):
+        pass
         
         
                 

@@ -17,9 +17,9 @@ The goal of this repository is to provide clear and efficient implementations of
 ### Steps
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/repository-name.git
+    https://github.com/MadhawaAponso/Data-Structures-and-Algorithms.git
     ```
 2. Navigate to the project directory:
     ```sh
-    cd repository-name
+    cd Data-Structures-and-Algorithms
     ```

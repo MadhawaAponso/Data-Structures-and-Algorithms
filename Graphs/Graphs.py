@@ -35,6 +35,7 @@ class Graphs:
             return True
         return False
     
+    # traversing grpah
     def BreathFirstSearch(self,vertex):
         tested = list()
         tested.append(vertex)
@@ -47,9 +48,23 @@ class Graphs:
                     tested.append(values)
                     queue.append(values)
         return tested
+    #traversing graph
+    def DepthFirstSearch(self, vertex):
+        visited = []
+        stack = [vertex]  # Use a stack for DFS
     
-    def DepthFirstSearch(self,vertex):
-        pass
+        while stack:
+            current = stack.pop()
+        
+            if current not in visited:
+                visited.append(current)
+                for neighbor in reversed(self.gdict[current]):
+                    if neighbor not in visited:
+                        stack.append(neighbor)
+                        print(stack)
+                    
+        return visited
+             
         
         
                 
@@ -58,20 +73,24 @@ class Graphs:
 custom_graph = Graphs()
 custom_graph.add_vertex("A")
 custom_graph.add_vertex("B")
-custom_graph.add_vertex("H")
-custom_graph.add_vertex("K")
+custom_graph.add_vertex("C")
+custom_graph.add_vertex("D")
+custom_graph.add_vertex("E")
 
 
 custom_graph.add_edges("A","B")
-custom_graph.add_edges("B","H")
-custom_graph.add_edges("B","K")
+custom_graph.add_edges("A","C")
+custom_graph.add_edges("B","E")
+custom_graph.add_edges("D","E")
+custom_graph.add_edges("D","C")
 
 custom_graph.print_graph()
 
 print("After removing")
 
-# custom_graph.remove_edge("B","H")
-custom_graph.remove_vertex("F")
+# # custom_graph.remove_edge("B","H")
+# custom_graph.remove_vertex("F")
 custom_graph.print_graph()
 
-print(custom_graph.BreathFirstSearch("H"))
+print(custom_graph.BreathFirstSearch("A"))
+print(custom_graph.DepthFirstSearch("A"))

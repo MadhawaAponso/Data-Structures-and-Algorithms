@@ -4,17 +4,7 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-class Solution:
-    def maxi(self,root):
-        if not root:
-            return 0
-        else:
-            l=self.maxi(root.left)
-            r=self.maxi(root.right)
-            return max(l,r)+1
-
-    def maxDepth(self, root: Optional[TreeNode]) -> int:
-        return self.maxi(root)
+ 
     
 ################################################################################################################################
 class Solution:

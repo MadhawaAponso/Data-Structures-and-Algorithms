@@ -1,14 +1,14 @@
-numbers = [3, 5, 7, 2, 8, 1, 9, 4, 6]
+from collections import Counter
 
-# Step 1: Find the maximum value
-max_value = max(numbers)
+def find_duplicates(input_list):
+    counter = Counter(input_list)
+    duplicates = []
+    for item, count in counter.items():
+        if count > 1:
+            duplicates.extend([item] * (count - 1))
+    return duplicates
 
-# Step 2: Find the index of the maximum value
-max_index = numbers.index(max_value)
-
-# Step 3: Split the list into two parts
-list1 = numbers[:max_index + 1]  # Up to and including the maximum value
-list2 = numbers[max_index + 1:]  # All elements after the maximum value
-
-print("List 1:", list1)
-print("List 2:", list2)
+# Example usage
+my_list = [0,0,0,0,0,0,0,0]
+duplicates = find_duplicates(my_list)
+print(duplicates)  # Output: [1, 2, 2, 3]

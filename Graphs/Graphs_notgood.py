@@ -15,5 +15,5 @@ customDict={"a":["b,c"],
             "f":["d","e"]}
 
 Graph1 = Graph(customDict)
-# Graph1.add("d",'a')
+Graph1.add("d",'a')
 print(Graph1.gdict)
